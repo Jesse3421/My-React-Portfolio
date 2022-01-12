@@ -44,7 +44,7 @@ function App() {
     <main>
       {!contactSelected ? (
         <> 
-      <Portfolio></Portfolio>
+      <Portfolio currentProject={currentProject}></Portfolio>
       <About></About>
       </>
       ) : (

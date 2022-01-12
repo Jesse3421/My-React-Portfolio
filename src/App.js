@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import About from './components/About';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
-import Projects from './components/Projects';
+import Portfolio from './components/Portfolio';
 import ContactForm from './components/Contact';
 
 function App() {
   const [contactSelected, setContactSelected] = useState(false);
+  
   const [projects] = useState([
     { name: 'run-buddy', 
       description: 'Describe Application here' 
@@ -43,7 +44,7 @@ function App() {
     <main>
       {!contactSelected ? (
         <> 
-      <Projects></Projects>
+      <Portfolio></Portfolio>
       <About></About>
       </>
       ) : (

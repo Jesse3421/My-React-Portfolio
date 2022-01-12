@@ -3,8 +3,14 @@ import { validateEmail } from '../../utils/helpers';
 
 function ContactForm() {
     const [formState, setFormState] = useState({ name: '', email: '', message: ''});
-    const { name, email, message} = formState;
     const [errorMessage, setErrorMessage] = useState('');
+    const { name, email, message} = formState;
+    
+    function handleSubmit(e) {
+        e.preventDefault();
+        if(!errorMessage){ 
+        console.log('Submit Form', formState);
+    }};
 
     function handleChange(e){
         if(e.target.name === 'email'){
@@ -24,14 +30,10 @@ function ContactForm() {
         }
         if(!errorMessage){
             setFormState({...formState, [e.target.name]: e.target.value})
-        console.log('Handle Form', formState);
+            console.log('Handle Form', formState);
         }
     };
-
-    function handleSubmit() {
-        e.preventDefault();
-        console.log(formState);
-    }
+    
 
     return(
         <section>
@@ -54,7 +56,7 @@ function ContactForm() {
                         <p className="error-text">{errorMessage}</p>
                     </div>
                 )}
-                <button type="submit">Submit</button>
+                <button data-testid="button" type="submit">Submit</button>
             </form>
         </section>
     )

@@ -3,7 +3,7 @@ import PhotoList from '../PhotoList';
 import { capitalizeFirstLetter } from "../../utils/helpers";
 
 
-function Projects({currentProject}) {
+function Portfolio({currentProject}) {
     const { name, description } = currentProject;
 
     return(
@@ -15,4 +15,4 @@ function Projects({currentProject}) {
     );
 }
 
-export default Projects;
+export default Portfolio;

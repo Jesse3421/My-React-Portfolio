@@ -8,7 +8,7 @@ function Nav(props) {
     setCurrentProject,
     currentProject,
     contactSelected,
-    secContactSelected
+    setContactSelected
   } = props
   
   
@@ -16,24 +16,27 @@ function Nav(props) {
     document.title = capitalizeFirstLetter(currentProject.name);
   }, [currentProject]);
 
-      // const handleClick = () => {
-      //     console.log("click handled")
-      // }
-
     return (
     <header className="flex-row px-1">
         <h1>Jesse Koon</h1>
       <nav>
         <ul className="flex-row">
           <li className="mx-2">
-            <a data-testid="about" href="#about" onClick={() => secContactSelected(false)}>
+            <a data-testid="about" href="#about" onClick={() => setContactSelected(false)}>
               About me
             </a>
           </li>
+          <li className={`mx-2 ${contactSelected && 'navActive'}`}>
+            <span onClick={() => setContactSelected(true)}>
+              Contact   
+            </span>
+          </li>     
           {projects.map((projects) => {
                 <li className={`mx-1 ${
-                  currentProject.name === projects.name && 'navActive'
-          }`}key={projects.name} >
+                  currentProject.name === projects.name && !contactSelected && 'navActive'
+          }`}
+          key={projects.name} 
+          >
                     <span 
                       onClick={() => { 
                         setCurrentProject(projects)
@@ -43,17 +46,7 @@ function Nav(props) {
                         {capitalizeFirstLetter(projects.name)}
                     </span>
                 </li>   
-                })}
-          <li className="mx-2">
-            <a href="contact"><span>
-                Contact
-                </span></a>
-          </li>
-          <li className={`"mx-2" ${contactSelected && 'navActive'}`}>
-            <a href="#resume">
-              Resume   
-            </a>
-          </li>     
+              })}
         </ul>
       </nav>
     </header>

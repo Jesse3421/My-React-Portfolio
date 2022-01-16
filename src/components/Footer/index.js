@@ -3,9 +3,8 @@ import React from 'react';
 
 function Footer() {
     return (
-        <section className="my-5">
-            <h1 id="about">Contact Info for FOOTER</h1>
-            
+        <section className="footer fixed-bottom mh-25">
+            <h1 id="about"></h1> 
         </section>
     );
 }

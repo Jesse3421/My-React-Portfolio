@@ -4,36 +4,26 @@ import { capitalizeFirstLetter } from '../../utils/helpers';
 import { Card } from 'react-bootstrap';
 
 
-const ProjectList = (projects) => {
-    console.log(projects)
+function ProjectList({projectx}) {
+    console.log({projectx})
 
-    const {name, description, githupRepo, deployedApp, image}
+    const {name, description, githubRepo, deployedApp, image} = projectx
 
-    const currentProject = useState(projects);
+  //  const currentProject = useState(projects);
 
     
     return (
         <div>
-        {currentProject.map((project) => { 
-            const name = project.name;
-            const description = project.description;
-            const repo = project.githubRepo;
-            const deployedApp = project.deployedApp;
-            const image = project.image;
-            
-     return (
-        <Card className="bg-dark text-white">
-          <Card.Img src={require(`../../assets/projectPhoto/${image}/100px270`)} alt="Card image" />
+        <Card className="bg-dark text-white projectCard" key={name}>
+          <Card.Img src={require(`../../assets/projectPhoto/${image}`)} alt="Card image" />
           <Card.ImgOverlay>
           <Card.Title>{capitalizeFirstLetter(name)}</Card.Title>
           <Card.Text>{description}</Card.Text>
           <Card.Link href={deployedApp}>Click to View the {name} App </Card.Link>
-          <Card.Link href={repo}>Click to View the Github Repo</Card.Link>
+          <Card.Link href={githubRepo}>Click to View the Github Repo</Card.Link>
           </Card.ImgOverlay>
         </Card>
-        );
-        })}
-    </div>
+        </div>
     
         );
 }

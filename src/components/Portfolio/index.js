@@ -6,8 +6,9 @@ import ProjectList from '../ProjectList';
 
 
 function Portfolio() {
+    
 
-    const projects = ([
+    const [projects] = useState([
         { name: 'wander',
         description: 'Using the NPS.Gov API, The user may input a two character state code (Example: NY) and return a list of National Parks, Trails, and Historic Sites in that state. Then, using the OpenWeather API, Loop through the parks Lat&Long to return the weather conditions for that park using the OpenWeather API Open Call API. The user may also elect to save their favorite parks to local storage, with an option to recall them at a later time.',
         githubRepo: 'https://github.com/Jesse3421/Wander',
@@ -46,20 +47,17 @@ function Portfolio() {
         }
         ]);
     
-  //const [currentProject, setCurrentProject] = useState(projects[0]);
 
   
   return(
  
       <section>
-          {projects.map((project, idx) => (
+          {projects.map((projectx, idx) => (
               <ProjectList
-                    project = {project}
-                    key={"project + idx"}
+                    projectx = {projectx}
+                    key={idx}
+                    />
           ))}
-          <ProjectList>
-            [projects]={[projects]}
-          </ProjectList>
        </section>
     );
 }   

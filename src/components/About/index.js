@@ -9,7 +9,7 @@ function About() {
             <Container className="fluid my-3" >
             <Row flex>
                 <Col md={4}>
-                    <img src={coverImage} className="my-2" style={{ width: "50%" }} alt="cover" />
+                    <img src={coverImage} className="my-2" id="aboutImage" style={{ width: "50%" }} alt="cover" />
                 </Col>
                 <Col md={8}>
                     <p>
@@ -17,8 +17,7 @@ function About() {
                     </p>
                 </Col>
             </Row>
-            </Container>
-            
+            </Container> 
         </Container>
     );
 }

@@ -32,63 +32,45 @@ function Navigation(props) { //props needs to be in the ()
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto ">
-            <Nav.Link href="#About">About</Nav.Link>
-            <NavDropdown title="Portfolio" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Wander App</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Progressive Web Application</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Work Day Scheduler</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.4">Weather Dashboard</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.5">Social Network Api</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.6">E-commerce App</NavDropdown.Item>
-            </NavDropdown>
-            <Nav.Link href="#Contact" className={`mx-2 ${contactSelected && 'navActive'}`}>
+            <Nav.Link data-testid="about" href="#about" onClick={() => setContactSelected(false)}>About</Nav.Link>
+            <Nav.Link href="#contact" className={`mx-2 ${contactSelected && 'navActive'}`}>
                  <span onClick={() => setContactSelected(true)}>
                    Contact   
                  </span>      
             </Nav.Link>
-            <Nav.Link href="#Resume">Resume</Nav.Link>
+            <Nav.Link data-testid="portfolio" href="#portfolio">Portfolio</Nav.Link>
+            <Nav.Link href="#resume">Resume</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
           
-            // <header className="flex-row px-1">
-            //   <h1>Jesse Koon</h1>
-            //   <nav>
-            //   <ul className='flex-row px-1'>
-            //         <li className="mx-2">
-            //           <a data-testid="about" href="#about" 
-            //           onClick={() => setContactSelected(false)}
-            //           >
-            //             About me
-            //           </a>
-            //         </li>
-      
-            //         <li className="mx-2">Portfolio</li>
-            //         <li className="mx-2">Resume</li>
 
-        //             {/* {projects.map((projects) => {
-        //             <li className={`mx-1 ${
-        //               currentProject.name === projects.name && !contactSelected && 'navActive'
-        //                 }`}
-        //               key={projects.name} 
-        //             >                           
-        //               <span 
-        //                 onClick={() => { 
-        //                 setCurrentProject(projects)
-        //                 setContactSelected(false)
-        //                   }}
-        //                 >
-        //                 {capitalizeFirstLetter(projects.name)}
-        //               </span>
-        //               </li>   
-        //              })}  */}
-        //     //   </ul>
-        //     //   </nav>
-        //     // </header>
-        // )};
-        
-    )};
-        export default Navigation; 
-        
-        //       //<img src={coverImage} className="my-2" style={{ width: "100%" }} alt="cover" />
+          
+          
+          )};
+          export default Navigation; 
+          
+          //             {/* {projects.map((projects) => {
+          //             <li className={`mx-1 ${
+          //               currentProject.name === projects.name && !contactSelected && 'navActive'
+          //                 }`}
+          //               key={projects.name} 
+          //             >                           
+          //               <span 
+          //                 onClick={() => { 
+          //                 setCurrentProject(projects)
+          //                 setContactSelected(false)
+          //                   }}
+          //                 >
+          //                 {capitalizeFirstLetter(projects.name)}
+          //               </span>
+          //               </li>   
+          // <NavDropdown title="Portfolio" id="basic-nav-dropdown">
+          //   <NavDropdown.Item href="#action/3.1">Wander App</NavDropdown.Item>
+          //   <NavDropdown.Item href="#action/3.2">Progressive Web Application</NavDropdown.Item>
+          //   <NavDropdown.Item href="#action/3.3">Work Day Scheduler</NavDropdown.Item>
+          //   <NavDropdown.Item href="#action/3.4">Weather Dashboard</NavDropdown.Item>
+          //   <NavDropdown.Item href="#action/3.5">Social Network Api</NavDropdown.Item>
+          //   <NavDropdown.Item href="#action/3.6">E-commerce App</NavDropdown.Item>
+            // </NavDropdown>

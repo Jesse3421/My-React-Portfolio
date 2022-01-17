@@ -5,7 +5,7 @@ import { Form, Button, Container, Col } from 'react-bootstrap';
 function ContactForm() {
     const [formState, setFormState] = useState({ name: '', email: '', message: ''});
     const [errorMessage, setErrorMessage] = useState('');
-    const { name, email, message} = formState;
+    const { name, email, message } = formState;
     
     function handleSubmit(e) {
         e.preventDefault();
@@ -41,17 +41,17 @@ function ContactForm() {
             <Form controlId="contact-form" onSubmit={handleSubmit} className="mt-3">
             <Form.Group className="mb-3 px-5" controlId="formName">
                 <Form.Label htmlFor="name">Name</Form.Label>
-                <Form.Control type="text" defaultValue={name} onBlur={handleChange} placeholder="Enter Name" />
+                <Form.Control type="text" name="name" defaultValue={name} onBlur={handleChange} placeholder="Enter Name" />
             </Form.Group>
             
             <Form.Group className="mb-3 px-5" controlId="formBasicEmail">
-                <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" placeholder="Enter Email" defaultValue={email} onBlur={handleChange} />
+                <Form.Label htmlFor="email">Email address</Form.Label>
+                <Form.Control type="email" name="email" placeholder="Enter Email" defaultValue={email} onBlur={handleChange} />
             </Form.Group>
             
             <Form.Group className="mb-3 px-5" controlId="formMessage">
-                <Form.Label>Message</Form.Label>
-                <Form.Control  as="textarea" placeholder="Enter Message" rows={5} defaultValue={message} onBlur={handleChange}/>
+                <Form.Label htmlFor="message">Message</Form.Label>
+                <Form.Control  as="textarea" name="message" placeholder="Enter Message" rows={5} defaultValue={message} onBlur={handleChange}/>
             </Form.Group>
                 {errorMessage && (
                     <div>
@@ -73,11 +73,13 @@ function ContactForm() {
 //                 <label htmlFor="name">Name:</label>
 //                 <input type="text" defaultValue={name} onBlur={handleChange} name="name" />
 //                 </div>
-//                 <div>
+//                
+//                   <div>
 //                 <label htmlFor="email">Email Address:</label>
 //                 <input type="email" defaultValue={email} name="email" onBlur={handleChange}/>
 //                 </div>
-//                 <div>
+//                 
+                    //<div>
 //                 <label htmlFor="message">Message:</label>
 //                 <textarea name="message" defaultValue={message} onBlur={handleChange} rows="5"/>
 //                 </div>

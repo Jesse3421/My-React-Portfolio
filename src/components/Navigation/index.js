@@ -9,17 +9,9 @@ import '../../App.css'
 
 
 
-function Navigation(props) { 
+function Navigation({ currentPage, handleChange}) { 
 
-      const { 
-              portfolioSelected,
-              setPortfolioSelected,
-              contactSelected,
-              setContactSelected,
-              resumeSelected,
-              setResumeSelected
-            } = props
-
+    console.log(currentPage)
 
 
     return (
@@ -30,23 +22,22 @@ function Navigation(props) {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto ">
             
-            <Nav.Link data-testid="about" href="#about" onClick={() => setContactSelected(false)}>About</Nav.Link>
-            
-            <Nav.Link data-testId="contact" href="#contact" className={`mx-2 ${contactSelected && 'navActive'}`}>
-                 <span onClick={() => setContactSelected(true)}>
-                   Contact   
-                 </span>      
-            </Nav.Link>
-            <Nav.Link data-testId="portfolio" href="#portfolio" className={`mx-2 ${portfolioSelected && 'navActive'}`}>
-                 <span onClick={() => setPortfolioSelected(true)}>
-                   Portfolio   
-                 </span>      
+            <Nav.Link  href="#about" onClick={() => handleChange('About')} className= {`mx-2 ${currentPage === 'About'} && 'navActive'`}>
+              About
             </Nav.Link>
             
-            <Nav.Link data-testId="resume" href="#resume" className={`mx-2 ${resumeSelected && 'navActive'}`}>
-                 <span onClick={() => setResumeSelected(true)}>
-                   Resume  
-                 </span>      
+            <Nav.Link href="#contact" onClick={() => handleChange('Contact')} 
+            className={`mx-2 ${currentPage === 'Contact'} && 'navActive'}`}>
+              Contact                
+            </Nav.Link>
+            
+            <Nav.Link  href="#portfolio" onClick={() => handleChange('Portfolio')} className={`mx-2 ${currentPage === 'Portfolio'} &&  
+            'navActive'}`}>
+               Portfolio                   
+            </Nav.Link>
+            
+            <Nav.Link  href="#resume" onClick={() => handleChange('Resume')} className={`mx-2 ${currentPage === 'Resume'} && 'navActive'}`}>
+              Resume    
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
@@ -56,5 +47,6 @@ function Navigation(props) {
 
           
           
-          )};
-          export default Navigation; 
+    )};
+
+  export default Navigation; 

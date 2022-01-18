@@ -51,13 +51,16 @@ function Portfolio() {
   
   return(
  
-      <section>
+      <section className="container-fluid d-flex justify-content-around ">
+        <div className="row">
+
           {projects.map((projectx, idx) => (
               <ProjectList
-                    projectx = {projectx}
-                    key={idx}
-                    />
-          ))}
+              projectx = {projectx}
+              key={idx}
+              />
+              ))}
+        </div>
        </section>
     );
 }   

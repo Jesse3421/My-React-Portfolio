@@ -9,22 +9,27 @@ function ProjectList({projectx}) {
 
     const {name, description, githubRepo, deployedApp, image} = projectx
 
-  //  const currentProject = useState(projects);
 
     
     return (
-        <div>
-        <Card className="bg-dark text-white projectCard" key={name}>
-          <Card.Img src={require(`../../assets/projectPhoto/${image}`)} alt="Card image" />
-          <Card.ImgOverlay>
-          <Card.Title>{capitalizeFirstLetter(name)}</Card.Title>
-          <Card.Text>{description}</Card.Text>
-          <Card.Link href={deployedApp}>Click to View the {name} App </Card.Link>
-          <Card.Link href={githubRepo}>Click to View the Github Repo</Card.Link>
-          </Card.ImgOverlay>
-        </Card>
-        </div>
-    
+        
+        
+            <Card className="col-md-4 bg-light text-white projectCard" key={name}>  
+            <Card.Img variant="top" src={require(`../../assets/projectPhoto/${image}`)} alt="Card image" className="card-image"/>
+            <Card.Body>
+            <Card.Text>
+            <Card.Title className="text-center">{capitalizeFirstLetter(name)}</Card.Title>
+            <Card.Text className="text-center">{description}</Card.Text>
+            <div className="text-center">
+            <Card.Link  href={deployedApp}>Click to View the App </Card.Link>
+            <Card.Link  href={githubRepo}>Click to View the Github Repo</Card.Link>
+            </div>
+            </Card.Text>
+            </Card.Body>
+            </Card>
+
+        
+        
         );
 }
 

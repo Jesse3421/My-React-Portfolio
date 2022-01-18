@@ -164,10 +164,32 @@ p {
   font-size: 2rem;
   font-weight: 150;
 }
-/* .projectCard {
-  width: .5 rem;
-  height: .5 rem;
-} */
-/* #aboutImage {
-  max-width: 60% !important;
-} */
+.card {
+width: 20rem
+}
+
+.card:hover {
+  box-shadow: 5px 10px 20px 1px rgba(0,0,0,0.253) !important;
+}
+.card-text {
+  font-size: 1rem;
+  color: #3c6e71;
+}
+.card-body {
+  background-color: #d9d9d9;
+}
+.resume {
+  display: flex;
+  justify-content: center;
+  margin: 2rem; 
+}
+
+.resume img {
+  border: #284b63;
+  border-style: solid;
+  border-width: 2px;
+
+}
+.resume img:hover {
+  transform: scale(1.25);
+}

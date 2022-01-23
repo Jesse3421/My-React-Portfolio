@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ProjectList from '../ProjectList';
 // import { capitalizeFirstLetter } from "../../utils/helpers";
-// import { Card } from 'react-bootstrap';
+import { Card, CardGroup, Row } from 'react-bootstrap';
 
 
 
@@ -51,8 +51,9 @@ function Portfolio() {
   
   return(
  
-      <section className="container-fluid d-flex justify-content-around ">
-        <div className="row">
+      <div className="container ">
+        <div className="row g-3">
+            
 
           {projects.map((projectx, idx) => (
               <ProjectList
@@ -60,77 +61,14 @@ function Portfolio() {
               key={idx}
               />
               ))}
+        
         </div>
-       </section>
+       </div>
     );
 }   
     
 export default Portfolio;
 
 
-
-
-
-        //         <section className="flex">
-        //             <div className="w-50 mx-auto">
-        //                 <img 
-        //                 src={require(`../../assets/projectPhoto/eCommerce/0.png`)}
-        //                 alt='ecommerce project photo'
-        //                 width="400"
-        //                 height="500"
-        //                 key='ecommercePhoto'
-        //                 />
-        //             </div>
-        
-        //             <div className="w-50 mx-auto">
-        //                 <img 
-        //                 src={require(`../../assets/projectPhoto/pwa/0.png`)}
-        //                 alt='pwa photo'
-        //                 width="400"
-        //                 height="500"
-        //                 key='pwaPhoto'
-        //                 />
-        //             </div>
-                    
-        //             <div className="w-50 mx-auto">
-        //                 <img 
-        //                 src={require(`../../assets/projectPhoto/socialNetworkAPI/0.png`)}
-        //                 alt='social network api photo'
-        //                 width="400"
-        //                 height="500"
-        //                 key='apiPhoto'
-        //                 />
-        //             </div>
-        
-        //             <div className="w-50 mx-auto">
-        //                 <img 
-        //                 src={require(`../../assets/projectPhoto/wander/0.jpg`)}
-        //                 alt='wander project photo'
-        //                 width="400"
-        //                 height="500"
-        //                 key='wanderPhoto'
-        //                 />
-        //             </div>
-                    
-        //             <div className="w-50 mx-auto">
-        //                 <img 
-        //                 src={require(`../../assets/projectPhoto/weatherDashboard/0.png`)}
-        //                 alt='weather dashboard photo'
-        //                 width="400"
-        //                 height="500"
-        //                 key='weatherDashboard'
-        //                 />
-        //             </div>
-                    
-        //             <div className="w-50 mx-auto">
-        //                 <img 
-        //                 src={require(`../../assets/projectPhoto/workDaySchedule/0.png`)}
-        //                 alt='work day schedule photo'
-        //                 width="400"
-        //                 height="500"
-        //                 key='workDay'
-        //                 />
-        //             </div>
-        //         </section>
-        //     );
-        // }
+//container-fluid d-flex justify-content-around 
+//d-flex justify-content-around

@@ -7,7 +7,6 @@ import Contact from './components/Contact';
 import Resume from './components/Resume';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { HashRouter, Route, Routes } from 'react-router-dom';
 import Wrapper from './components/Wrapper';
 
 

@@ -164,9 +164,6 @@ p {
   font-size: 2rem;
   font-weight: 150;
 }
-.card {
-width: 20rem
-}
 
 .card:hover {
   box-shadow: 5px 10px 20px 1px rgba(0,0,0,0.253) !important;
@@ -192,4 +189,28 @@ width: 20rem
 }
 .resume img:hover {
   transform: scale(1.25);
+}
+.footer {
+  background: #284b63 !important;
+  min-height: 1rem;
+
+}
+.card-img-top {
+  width: auto;
+  height: 20vw;
+  object-fit: cover;
+}
+.card-link {
+  color: #3c6e71;
+}
+.card {
+  padding: 2rem;
+}
+/* Footer */
+.page-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 7rem;
+  background-color: #284b63
 }

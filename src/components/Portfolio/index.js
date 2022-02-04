@@ -39,11 +39,17 @@ function Portfolio() {
         deployedApp:'https://watch.screencastify.com/v/TWZfA2kuGiGKHMA5Xbq6',
         image:'socialNetworkAPI/0.png'
         },
-        { name: 'e-commerce project', 
-        description: 'This project is the back end portion for an e-commerce website that allows the user to utilize the website following proper CRUD procedures.', 
-        githubRepo: 'https://github.com/Jesse3421/E-commerce-Project',
-        deployedApp:'https://watch.screencastify.com/v/kBloNbD6W4Q6kQWvPcuw',
-        image:'eCommerce/0.png'
+        // { name: 'e-commerce project', 
+        // description: 'This project is the back end portion for an e-commerce website that allows the user to utilize the website following proper CRUD procedures.', 
+        // githubRepo: 'https://github.com/Jesse3421/E-commerce-Project',
+        // deployedApp:'https://watch.screencastify.com/v/kBloNbD6W4Q6kQWvPcuw',
+        // image:'eCommerce/0.png'
+        // },
+        { name: '(Re)Solution', 
+        description: 'This project utilizes graphql and react so the user can create a profile, pick from a wide array of exercies and they can create a workout.', 
+        githubRepo: 'https://github.com/adamjflynn/re-solution',
+        deployedApp:'https://resolution123456.herokuapp.com/',
+        image:'resolution/0.png'
         }
         ]);
     
